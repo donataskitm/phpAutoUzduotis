@@ -9,7 +9,7 @@ class Motorcycle extends Vehicle{
 
     public  function __constructor($model, $brand, $price, $description, $engine, $power, $maxSpeed)
     {
-        parent::__constructor($model, $brand, $price, $description, $engine, $power, $maxSpeed);
+        parent::__constructor($model, $brand, $price, $description);
 
         $this->engine = $engine;
         $this->power = $power;

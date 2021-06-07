@@ -10,7 +10,7 @@ class Car extends Vehicle{
 
     public  function __constructor($model, $brand, $price, $weight, $engine, $power, $maxSpeed, $description, $seats)
     {
-    parent::__constructor($model, $brand, $price,$description, $weight, $engine, $power, $maxSpeed, $seats);
+    parent::__constructor($model, $brand, $price, $description);
     $this->engine = $engine;
     $this->power = $power;
     $this->maxSpeed = $maxSpeed;

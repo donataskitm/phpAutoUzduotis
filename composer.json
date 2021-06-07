@@ -1,0 +1,10 @@
+{
+  "autoload": {
+  "name": "Demo aplikacija",
+  "description": "Automatinis klasiu krovimas",
+  "psr-4": {
+    "DemoApp\\": "app"
+    }
+    }
+
+}

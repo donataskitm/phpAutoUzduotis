@@ -3,30 +3,39 @@
 namespace DemoApp;
 
 class Vehicle
-//Reikia	sukurti	bazinę	transporto	priemonės	klasę,	kuri	turėtų	bendras	savybes,	tinkamas	tiek
-//automobiliui,	tiek	motociklui,	tiek	dviračiui;
+
 {
-    private $model;
-    private $brand;
-    private $price;
-    private $description;
+    public $model;
+    public $brand;
+    public $price;
+    public $weight;
+    public $power;
+    public $speed;
+    public $description;
+    public $seats;
 
-    public function __construct($model, $brand, $price, $description)
+    public function __construct($model, $brand)
     {
-        $this->model = $model;
-        $this->brand = $brand;
-        $this->price = $price;
-        $this->description = $description;
-    }
-
-//Sukurti	konstruktorių,	kurio	pagalba	būtų	galima	iš	karto	nurodyti	modelį	ir	markę
-    public function __construct1($model, $brand)
-    {//jei klases viduj, jis visda kvieciamas ir butini perduoti paarametrai
         $this->model = $model;
         $this->brand = $brand;
     }
 
     //seteriai
+    public function setModelBrand($model, $brand)
+    {
+        $this->model=$model;
+        $this->brand=$brand;
+    }
+    //geteris
+    public function getModelBrand($model, $brand)
+    {
+        return [
+        $this->model=$model,
+        $this->brand=$brand
+        ];
+    }
+
+//seteriai
     public function setModel($model) {$this->model = $model;}
     public function setBrand($brand) {$this->brand = $brand;}
     public function setPrice($price) {$this->price = $price;}
@@ -38,18 +47,34 @@ class Vehicle
     public function getPrice(){return $this->price;}
     public function getDescription(){return $this->description;}
 
-    public function getModelBrand()
-{
-    return [
-        $this->model,
-        $this->brand
-    ];
+//metodai
+    public function changeModel($model){
+        $this->model = $model;
+    }
+    public function changeBrand($brand){
+        $this->brand = $brand;
+    }
+    public function changePrice($price){
+        $this->price = $price;
+    }
+    public function changeWeight($weight){
+        $this->weight = $weight;
+    }
 
-}
-    public function setModelBrand($model, $brand)
-    {
-            $this->model=$model;
-            $this->brand=$brand;
+    public function showPower(){
+       return  $this->power;
+    }
+    public function showSpeed(){
+        return  $this->speed;
+    }
+    public function showDescription(){
+        return  $this->description;
+    }
+    public function showPrice(){
+        return  $this->price;
+    }
+    public function showSeats(){
+        return  $this->seats;
     }
 
 
